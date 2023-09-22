@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
-import 'brn_radio_core.dart';
+import 'radio_core.dart';
 
 ///多选按钮
-class BrnCheckbox extends StatefulWidget {
+class Checkbox extends StatefulWidget {
   /// 标识当前Radio的Index
   final int radioIndex;
 
@@ -49,7 +49,7 @@ class BrnCheckbox extends StatefulWidget {
   /// 默认值HitTestBehavior.translucent。控制widget.onRadioItemClick触发的点击范围
   final HitTestBehavior behavior;
 
-  const BrnCheckbox(
+  const Checkbox(
       {Key? key,
       required this.radioIndex,
       required this.onValueChangedAtIndex,
@@ -69,7 +69,7 @@ class BrnCheckbox extends StatefulWidget {
   }
 }
 
-class BrnCheckboxState extends State<BrnCheckbox> {
+class BrnCheckboxState extends State<Checkbox> {
   late bool _isSelected;
 
   @override
@@ -79,7 +79,7 @@ class BrnCheckboxState extends State<BrnCheckbox> {
   }
 
   @override
-  void didUpdateWidget(covariant BrnCheckbox oldWidget) {
+  void didUpdateWidget(covariant Checkbox oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     if (oldWidget.isSelected != widget.isSelected) {
@@ -89,7 +89,7 @@ class BrnCheckboxState extends State<BrnCheckbox> {
 
   @override
   Widget build(BuildContext context) {
-    return BrnRadioCore(
+    return RadioCore(
       radioIndex: widget.radioIndex,
       disable: widget.disable,
       isSelected: _isSelected,
@@ -105,7 +105,6 @@ class BrnCheckboxState extends State<BrnCheckbox> {
           BrunoTools.getAssetImage(BaseAsset.iconRadioDisableSingleSelected),
       disUnselectedImage:
           BrunoTools.getAssetImage(BaseAsset.iconRadioDisableUnselected),
-      child: widget.child,
       onRadioItemClick: () {
         setState(() {
           _isSelected = !_isSelected;
@@ -113,6 +112,7 @@ class BrnCheckboxState extends State<BrnCheckbox> {
         widget.onValueChangedAtIndex(widget.radioIndex, _isSelected);
       },
       behavior: widget.behavior,
+      child: widget.child,
     );
   }
 }
