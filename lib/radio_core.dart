@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// 2. 支持传入待选择widget，可以显示在选择按钮的左边或者右边
 /// 3. 传入widget时，widget和选择按钮使用Row包裹，支持传入Row的属性[MainAxisAlignment]和[MainAxisSize]
 
-class BrnRadioCore extends StatefulWidget {
+class RadioCore extends StatefulWidget {
   /// 标识当前Radio的Index
   final int radioIndex;
 
@@ -56,7 +56,7 @@ class BrnRadioCore extends StatefulWidget {
   /// 默认值HitTestBehavior.translucent控制widget.onRadioItemClick触发的点击范围
   final HitTestBehavior behavior;
 
-  const BrnRadioCore(
+  const RadioCore(
       {Key? key,
       required this.radioIndex,
       this.disable = false,
@@ -79,7 +79,7 @@ class BrnRadioCore extends StatefulWidget {
   _BrnRadioCoreState createState() => _BrnRadioCoreState();
 }
 
-class _BrnRadioCoreState extends State<BrnRadioCore> {
+class _BrnRadioCoreState extends State<RadioCore> {
   late bool _isSelected;
   late bool _disable;
 
@@ -91,7 +91,7 @@ class _BrnRadioCoreState extends State<BrnRadioCore> {
   }
 
   @override
-  void didUpdateWidget(BrnRadioCore oldWidget) {
+  void didUpdateWidget(RadioCore oldWidget) {
     super.didUpdateWidget(oldWidget);
     _isSelected = widget.isSelected;
     _disable = widget.disable;

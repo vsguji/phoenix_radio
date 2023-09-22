@@ -2,17 +2,17 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-02-01 17:46:29
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-09-22 12:48:49
+ * @LastEditTime: 2023-09-22 12:59:52
  * @FilePath: /phoenix_radio/lib/brn_radio_button.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
-import 'brn_radio_core.dart';
+import 'radio_core.dart';
 
 ///单选按钮
-class BrnRadioButton extends StatelessWidget {
+class RadioButton extends StatelessWidget {
   /// 标识当前Radio的Index
   final int radioIndex;
 
@@ -57,7 +57,7 @@ class BrnRadioButton extends StatelessWidget {
   /// 默认值HitTestBehavior.translucent控制widget.onRadioItemClick触发的点击范围
   final HitTestBehavior behavior;
 
-  const BrnRadioButton(
+  const RadioButton(
       {Key? key,
       required this.radioIndex,
       required this.onValueChangedAtIndex,
@@ -73,7 +73,7 @@ class BrnRadioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BrnRadioCore(
+    return RadioCore(
       radioIndex: radioIndex,
       disable: disable,
       isSelected: isSelected,
