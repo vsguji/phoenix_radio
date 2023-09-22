@@ -111,9 +111,9 @@ class _BrnRadioCoreState extends State<RadioCore> {
 
     Widget icon = Container(
       padding: widget.iconPadding ?? EdgeInsets.all(5),
-      child: this._isSelected
-          ? (this._disable ? widget.disSelectedImage : widget.selectedImage)
-          : (this._disable
+      child: _isSelected
+          ? (_disable ? widget.disSelectedImage : widget.selectedImage)
+          : (_disable
               ? widget.disUnselectedImage
               : widget.unselectedImage),
     );
@@ -140,7 +140,6 @@ class _BrnRadioCoreState extends State<RadioCore> {
     }
 
     return GestureDetector(
-      child: radioWidget,
       behavior: widget.behavior,
       onTap: () {
         if (widget.disable == true) return;
@@ -160,6 +159,7 @@ class _BrnRadioCoreState extends State<RadioCore> {
 //          }
 //        }
       },
+      child: radioWidget,
     );
   }
 }
