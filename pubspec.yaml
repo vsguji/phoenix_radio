@@ -1,6 +1,6 @@
 name: phoenix_radio
 description: phoenix 将做为企业级基础组件:Radio,提供项目支持。
-version: 1.0.3
+version: 1.0.4
 homepage: 'https://github.com/vsguji/phoenix_radio.git'
 
 environment:
@@ -24,13 +24,13 @@ flutter:
 
   # To add assets to your package, add an assets section, like this:
  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/icons/radio/
-    - assets/images/no_data.png
-    - assets/images/two_line_bubble.png
-    - assets/json/
-    - assets/json/china.json
+    - packages/phoenix_radio/assets/images/
+    - packages/phoenix_radio/assets/icons/
+    - packages/phoenix_radio/assets/icons/radio/
+    - packages/phoenix_radio/assets/images/no_data.png
+    - packages/phoenix_radio/assets/images/two_line_bubble.png
+    - packages/phoenix_radio/assets/json/
+    - packages/phoenix_radio/assets/json/china.json
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages
