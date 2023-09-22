@@ -98,13 +98,17 @@ class BrnCheckboxState extends State<Checkbox> {
       mainAxisAlignment: widget.mainAxisAlignment,
       crossAxisAlignment: widget.crossAxisAlignment,
       mainAxisSize: widget.mainAxisSize,
-      selectedImage: BrunoTools.getAssetImageWithBandColor(
-          BaseAsset.iconRadioMultiSelected),
-      unselectedImage: BrunoTools.getAssetImage(BaseAsset.iconRadioUnSelected),
-      disSelectedImage:
-          BrunoTools.getAssetImage(BaseAsset.iconRadioDisableSingleSelected),
-      disUnselectedImage:
-          BrunoTools.getAssetImage(BaseAsset.iconRadioDisableUnselected),
+      selectedImage: PhoenixTools.getAssetImageWithBandColor(
+          BaseAsset.iconRadioMultiSelected,
+          package: 'phoenix_radio'),
+      unselectedImage: PhoenixTools.getAssetImage(BaseAsset.iconRadioUnSelected,
+          package: 'phoenix_radio'),
+      disSelectedImage: PhoenixTools.getAssetImage(
+          BaseAsset.iconRadioDisableSingleSelected,
+          package: 'phoenix_radio'),
+      disUnselectedImage: PhoenixTools.getAssetImage(
+          BaseAsset.iconRadioDisableUnselected,
+          package: 'phoenix_radio'),
       onRadioItemClick: () {
         setState(() {
           _isSelected = !_isSelected;
