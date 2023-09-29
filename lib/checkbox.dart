@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
+import 'extension/radio_assets.dart';
 import 'radio_core.dart';
 
 ///多选按钮
@@ -99,15 +100,16 @@ class BrnCheckboxState extends State<Checkbox> {
       crossAxisAlignment: widget.crossAxisAlignment,
       mainAxisSize: widget.mainAxisSize,
       selectedImage: PhoenixTools.getAssetImageWithBandColor(
-          BaseAsset.iconRadioMultiSelected,
+          RadioAssets.iconRadioMultiSelected,
           package: 'phoenix_radio'),
-      unselectedImage: PhoenixTools.getAssetImage(BaseAsset.iconRadioUnSelected,
+      unselectedImage: PhoenixTools.getAssetImage(
+          RadioAssets.iconRadioUnSelected,
           package: 'phoenix_radio'),
       disSelectedImage: PhoenixTools.getAssetImage(
-          BaseAsset.iconRadioDisableSingleSelected,
+          RadioAssets.iconRadioDisableSingleSelected,
           package: 'phoenix_radio'),
       disUnselectedImage: PhoenixTools.getAssetImage(
-          BaseAsset.iconRadioDisableUnselected,
+          RadioAssets.iconRadioDisableUnselected,
           package: 'phoenix_radio'),
       onRadioItemClick: () {
         setState(() {

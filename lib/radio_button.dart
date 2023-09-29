@@ -2,13 +2,14 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-02-01 17:46:29
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-09-22 18:10:36
+ * @LastEditTime: 2023-09-29 20:36:49
  * @FilePath: /phoenix_radio/lib/brn_radio_button.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
+import 'extension/radio_assets.dart';
 import 'radio_core.dart';
 
 ///单选按钮
@@ -83,15 +84,16 @@ class RadioButton extends StatelessWidget {
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       selectedImage: PhoenixTools.getAssetImageWithBandColor(
-          BaseAsset.iconRadioSingleSelected,
+          RadioAssets.iconRadioSingleSelected,
           package: 'phoenix_radio'),
-      unselectedImage: PhoenixTools.getAssetImage(BaseAsset.iconRadioUnSelected,
+      unselectedImage: PhoenixTools.getAssetImage(
+          RadioAssets.iconRadioUnSelected,
           package: 'phoenix_radio'),
       disSelectedImage: PhoenixTools.getAssetImage(
-          BaseAsset.iconRadioDisableMultiSelected,
+          RadioAssets.iconRadioDisableMultiSelected,
           package: 'phoenix_radio'),
       disUnselectedImage: PhoenixTools.getAssetImage(
-          BaseAsset.iconRadioDisableUnselected,
+          RadioAssets.iconRadioDisableUnselected,
           package: 'phoenix_radio'),
       onRadioItemClick: () {
         onValueChangedAtIndex(radioIndex, true);
